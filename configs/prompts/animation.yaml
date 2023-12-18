@@ -1,10 +1,10 @@
-pretrained_model_path: "pretrained_models/stable-diffusion-v1-5"
-pretrained_vae_path: "pretrained_models/sd-vae-ft-mse"
-pretrained_controlnet_path: "pretrained_models/MagicAnimate/densepose_controlnet"
-pretrained_appearance_encoder_path: "pretrained_models/MagicAnimate/appearance_encoder"
+pretrained_model_path: "stable-diffusion-v1-5"
+pretrained_vae_path: "sd-vae-ft-mse"
+pretrained_controlnet_path: "MagicAnimate/densepose_controlnet"
+pretrained_appearance_encoder_path: "MagicAnimate/appearance_encoder"
 pretrained_unet_path: ""
 
-motion_module: "pretrained_models/MagicAnimate/temporal_attention/temporal_attention.ckpt"
+motion_module: "MagicAnimate/temporal_attention/temporal_attention.ckpt"
 
 savename: null
 
@@ -16,12 +16,14 @@ guidance_scale: 7.5
 
 source_image:
   - "inputs/applications/source_image/monalisa.png"
+  - "inputs/applications/source_image/0002.png"
   - "inputs/applications/source_image/demo4.png"
   - "inputs/applications/source_image/dalle2.jpeg"
   - "inputs/applications/source_image/dalle8.jpeg"
   - "inputs/applications/source_image/multi1_source.png"
 video_path:
   - "inputs/applications/driving/densepose/running.mp4"
+  - "inputs/applications/driving/densepose/demo4.mp4"
   - "inputs/applications/driving/densepose/demo4.mp4"
   - "inputs/applications/driving/densepose/running2.mp4"
   - "inputs/applications/driving/densepose/dancing2.mp4"
