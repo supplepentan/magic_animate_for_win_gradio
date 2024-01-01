@@ -21,7 +21,8 @@ def animate(reference_image, motion_sequence_state, seed, steps, guidance_scale)
     return animator(reference_image, motion_sequence_state, seed, steps, guidance_scale)
 
 
-with gr.Blocks() as demo:
+app = gr.Blocks()
+with app:
     animation = gr.Video(format="mp4", label="Animation Results", autoplay=True)
 
     with gr.Row():
@@ -59,5 +60,5 @@ with gr.Blocks() as demo:
         animation,
     )
 
-
-demo.launch(share=False)
+if __name__ == "__main__":
+    app.launch(share=False)
